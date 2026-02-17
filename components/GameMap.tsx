@@ -9,7 +9,7 @@ const SEVERITY_COLOR: Record<FailureSeverity, string> = {
   [FailureSeverity.S4]: "rgba(239,68,68,1)",
 };
 
-const MAP_IMAGE_SRC = "/tinman-town-map.jpg";
+const MAP_IMAGE_SRC = `${import.meta.env.BASE_URL}tinman-town-map.jpg`;
 const MAP_ASPECT_RATIO = 1056 / 768;
 const MAP_ROTATION_DEG = 180;
 
