@@ -1,0 +1,55 @@
+/* Extra styles for the visualizer. Tailwind is still loaded via CDN in index.html. */
+
+.map-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 10% 10%;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.9) 55%, transparent 100%);
+  opacity: 0.55;
+}
+
+.pixel-grid {
+  mask-image: none;
+  background-image:
+    linear-gradient(to right, rgba(255, 239, 191, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 239, 191, 0.08) 1px, transparent 1px);
+  background-size: 10% 10%;
+  opacity: 0.45;
+}
+
+.pixel-map-shell {
+  image-rendering: pixelated;
+  border: 2px solid rgba(217, 193, 137, 0.28);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 243, 214, 0.08),
+    0 24px 70px rgba(0, 0, 0, 0.45);
+}
+
+.poi {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+.pixel-poi {
+  font-family: "VT323", "Space Grotesk", monospace;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: rgba(253, 243, 212, 0.92);
+  background: rgba(18, 22, 26, 0.8);
+  border: 1px solid rgba(208, 178, 107, 0.45);
+  border-radius: 3px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.55);
+  backdrop-filter: none;
+}

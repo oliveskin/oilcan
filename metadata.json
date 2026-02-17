@@ -1,0 +1,5 @@
+{
+  "name": "Oil Can - Agent Observability",
+  "description": "An advanced OSS sidecar dashboard for Agent-Tinman. Features real-time log streaming, memory inspection, and AI-powered log analysis with pluggable LLM backends (Gemini/OpenAI-compatible/local).",
+  "requestFramePermissions": []
+}

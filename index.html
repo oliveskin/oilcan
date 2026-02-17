@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tinman Visualizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Space Grotesk', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              fps: {
+                bg: '#0f172a', // Slate 900
+                glass: 'rgba(15, 23, 42, 0.85)',
+                glassLight: 'rgba(30, 41, 59, 0.7)',
+                gold: '#fbbf24', // Amber 400 (Destiny Objective Color)
+                text: '#f8fafc',
+                accent: '#38bdf8', // Sky 400
+                danger: '#ef4444',
+              },
+              sector: {
+                reasoning: '#0ea5e9', // Sky
+                tools: '#eab308',     // Yellow
+                context: '#a855f7',   // Purple
+                feedback: '#f97316',  // Orange
+                deployment: '#ef4444',// Red
+              }
+            },
+            backgroundImage: {
+              'tactical-grid': `linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px)`,
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #020617;
+        color: #f8fafc;
+        overflow: hidden;
+      }
+      
+      /* Tactical Grid Background */
+      .bg-grid-pattern {
+        background-size: 40px 40px;
+        mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+      }
+
+      /* Glassmorphism utility */
+      .glass-panel {
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+
+      /* Destiny-style Objective Bar Gradient */
+      .objective-gradient {
+        background: linear-gradient(90deg, rgba(251, 191, 36, 0) 0%, rgba(251, 191, 36, 0.2) 20%, rgba(251, 191, 36, 0.2) 80%, rgba(251, 191, 36, 0) 100%);
+        border-top: 1px solid rgba(251, 191, 36, 0.5);
+        border-bottom: 1px solid rgba(251, 191, 36, 0.5);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.3/client",
+    "react-dom": "https://esm.sh/react-dom@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+<script src="/oilcan.config.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
